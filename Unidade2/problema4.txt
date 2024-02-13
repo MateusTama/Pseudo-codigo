@@ -1,0 +1,29 @@
+Objetivo: Calcular e mostrar o peso ideal da pessoa
+Entrada: Sua altura e seu sexo
+Processamento: Calcular o peso ideal a partir da fórmula. Para homens = (72.7*altura) - 58. Para mulheres (62.1*altura) - 44.7
+Saída: Mostrar o peso ideal para a pessoa
+
+algoritmo ideal
+
+var 
+
+    altura, peso_ideal: real
+    sexo: caractere["1"]
+
+inicio
+
+    Escreva("Qual a sua altura: ")
+    Leia(altura)
+    Escreva("Qual seu sexo (M/F): ")
+    Leia(sexo)
+
+    Se (sexo = "M") então
+        peso_ideal <- (72.7 * altura) - 58
+    senão
+        peso_ideal <- (62.1*altura) - 44.7
+    fim_se
+
+    Escreva("Seu peso ideal é: ", peso_ideal)
+
+Fim
+    

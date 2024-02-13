@@ -1,0 +1,25 @@
+Objetivo:  Ler, calcular e escrever a média aritmética de 4 números
+Entrada: Obter os 4 números
+Processamento: Efetuar a média aritmética dos 4 números
+Saída: Mostrar a média aritmética dos 4 números para o usuário
+
+algoritmo media_aritmetica
+
+var
+
+    n1, n2, n3, n4: real
+
+início
+
+    Escreva("Insira o primeiro número: ")
+    Leia(n1)
+    Escreva("Insira o segundo número: ")
+    Leia(n2)
+    Escreva("Insira o terceiro número: ")
+    Leia(n3)
+    Escreva("Insira o quarto número: ")
+    Leia(n4)
+    media <- n1 + n2 + n3 + n4 / 4
+    Escreva("A média aritmética entre os quatro números é: ", media)
+
+Fim

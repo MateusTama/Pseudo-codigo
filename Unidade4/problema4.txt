@@ -1,0 +1,24 @@
+Objetivo: Algoritmo que lê uma matriz de 5 x 5 de números inteiros e mostre os elementos da diagonal principal
+Entrada: Ler a matriz 5 x 5
+Processsamento: Nenhum
+Saída: Mostrar os elementos da diagonal principal
+
+algoritmo principal
+
+var
+
+    matriz: vetor [1..5, 1..5] de inteiro
+    indice, linha, coluna: inteiro
+
+inicio
+
+    Para linha de 1 até 5 passo 1 faça 
+        Para coluna de 1 até 5 passo 1 faça
+            Escreva("Informe o ", coluna, " número inteiro: ")
+            Leia(matriz[linha][coluna])
+        fim_para
+    fim_para
+    Para indice de 1 até 5 passo 1 faça
+        Escreva(indice, " x ", indice ":", matriz[indice][indice])
+    fim_para
+fim

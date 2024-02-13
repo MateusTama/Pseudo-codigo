@@ -1,0 +1,27 @@
+Objetivo: Converter uma temperatura em Celsius para Fahrenheit
+Entrada: Ler a temperatura em Celsius
+Processamento: Converter a temperatura em Celsius para Fahrenheit (C * 1.8 + 32)
+Saída: Informar a temperatura em Fahrenheit
+
+algoritmo conversao
+
+funcao converter (celsius: real) : real
+
+    inicio
+
+        retorne celsius * 1.8 + 32
+
+fim_funcao
+
+var
+
+    celsius, resultado: real
+
+inicio
+
+    Escreva("Informe uma temperatura em Celsius: ")
+    Leia(celsius)
+    resultado <- converter(celsius)
+    Escreva(celsius, " graus celsius em Fahrenheit são: ", resultado)
+
+fim

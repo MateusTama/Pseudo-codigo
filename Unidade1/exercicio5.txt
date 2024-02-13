@@ -1,0 +1,22 @@
+Objetivo: Apresentar o salario líquido e o salário bruto, a partir da valor da hora de uma aula, quantidade de aulas dadas e percentual de desconto do INSS
+Entrada: Ler a quantidade de aulas dadas, o valor da hora da aula e o percentual de INSS
+Processamento: Calcular o valor do salário bruto (valor da hora x quantidade de aulas dadas) e o salário líquido (salário bruto - INSS)
+Saída: Mostrar o salário líquido e o salário bruto
+
+algoritmo salario
+
+    valor_hora, quant_aulas, salario_liquido, salario_bruto, percentual_inss: real
+
+inicio
+
+    Escreva("Digite o valor da aula dada: ")
+    Leia(valor_hora)
+    Escreva("Digite a quantidade de aulas dadas: ")
+    Leia(quant_aulas)
+    Escreva("Digite o percentual do INSS: ")
+    Leia(percentual_inss)
+    salario_bruto <- valor_hora * quant_aulas
+    salario_liquido <- salario_bruto - salario_bruto * percentual_inss / 100
+    Escreva("Salário bruto: ", salario_bruto, "Salário líquido: ", salario_liquido)
+
+Fim

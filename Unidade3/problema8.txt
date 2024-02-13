@@ -1,0 +1,43 @@
+Objetivo: Ler a quantidade de produtos que a empresa possui. Produto = (nome, quantidade produzida, quantidade vendida)
+Entrada: Ler a quantidade de produtos que a emprese detêm
+Processamento: Imprimir nome e quantidade em estoque de produtos que têm estoque < 30 (estoque = quantidade produzida - quantidade vendida). Encontrar o produto com maior estoque
+Saída: Imprimir o nome do produto com maior quantidade em estoque. Imprimir nome e quantidade em estoque de produtos que têm estoque < 30.
+
+algoritmo empresa
+
+var
+
+    nome, nome_maiorEstoque: caractere
+    maiorEstoque ,contador, qtdProd, produzido, vendido, estoque: inteiro
+
+inicio
+
+    Escreva("Informe a quantidade de produtos que a empresa detêm: ")
+    Leia(qtdProd)
+    contador <- 1
+    maiorEstoque <- 0
+    nome_maiorEstoque <- ""
+    Enquanto (contador <= qtdProd) faça
+        Escreva("Informe o nome do ", contador, " produto: ")
+        Leia(nome)
+        Escreva("Informe a quantidade produzida: ")
+        Leia(produzido)
+        Escreva("Informe a quantidade vendida: ")
+        Leia(vendida)
+        estoque <- produzido - vendido
+        se (estoque < 30) então
+            Escreva("Este produto tem estoque inferior a 30!")
+            Escreva("Nome: ", nome)
+            Escreva("Estoque: ", estoque)
+        fim_se
+        se (estoque > maiorEstoque) então
+            nome_maiorEstoque <- nome
+        fim_se
+    fim_enquanto
+
+    Escreva("Produto com maior estoque: ", nome_maiorEstoque)
+    Escreva("Seu estoque é de: ", maiorEstoque, " produtos.")
+    
+fim
+
+

@@ -1,0 +1,20 @@
+Objetivo: Ler vários nomes e imprimir o primeiro caractere de cada um deles. O programa acaba quando for digitado "FIM"
+Entrada: Ler os nomes
+Processamento: Pegar o primeiro caractere de cada um dos nomes
+Saída: Mostrar o primeiro caractere de cada um dos nomes
+
+algoritmo first_letter
+
+var
+
+    nome: caractere
+
+inicio
+
+    Repita
+        Escreva("Informe um nome: ")
+        Leia(nome)
+        Escreva("A primeira letra do nome é: ", nome[1])
+    até_que (nome = "FIM")
+
+fim

@@ -1,0 +1,56 @@
+Objetivo: Ler o nome e notas de 5 alunos e classificá-los em ordem crescente de média
+Entrada: Ler o nome de 5 alunos e suas 4 notas bimestrais
+Processamento: Calcular a média do bimestre e classificar os alunos em ordem crescente de média
+Saída: Mostrar o nome dos alunos em ordem crescente de média
+
+algoritmo classe
+
+Tipo
+
+    aluno = registro
+    nome: caractere
+    notas: vetor[1..4] de real
+    media: real
+
+fim_registro
+
+var 
+
+    alunos: vetor[1..5] de aluno
+    soma, indice_nome, indice_nota: inteiro
+    aux: aluno
+
+inicio
+
+    Para indice_nome de 1 até 5 passo 1 faça
+        soma <- 0
+        Escreva("Informe o nome do aluno: ")
+        Leia(alunos[indice_nome].nome)
+        Para indice_nota de 1 até 4 passo 1 faça
+            Escreva("Informe a ", indice_nota, " nota: ")
+            Leia(alunos[indice_nome].notas[indice_nota])
+            soma <- soma + alunos[indice_nome].notas[indice_nota] 
+        fim_para
+        alunos[indice_nome].media <- soma / 4 
+    fim_para
+    Para indice_nome de 1 até 4 passo 1 faça
+        Para indice_nota de indice_nome+1 até 5 passo 1 faça
+            Se (alunos[indice_nome].media > alunos[indice_nota].media)
+                aux.nome <- alunos[indice_nome].nome
+                aux.notas <- alunos[indice_nome].notas
+                aux.media <- alunos[indice_nome].media
+                alunos[indice_nome].nome <- alunos[indice_nota].nome
+                alunos[indice_nome].notas <- alunos[indice_nota].notas
+                alunos[indice_nome].media <- alunos[indice_nota].media
+                alunos[indice_nota].nome <- aux.nome
+                alunos[indice_nota].notas <- aux.notas
+                alunos[indice_nota].media <- aux.media
+            fim_se
+        fim_para
+    fim_para
+    Para indice_nome de 1 até 5 passo 1 faça
+        Escreva("Aluno: ", alunos[indice_nome].nome)
+    fim_para
+fim
+
+

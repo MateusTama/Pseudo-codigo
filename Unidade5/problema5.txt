@@ -1,0 +1,33 @@
+Objetivo: Receber 1 número inteiro e informar se é ímpar ou par
+Entrada: Ler 1 número inteiro
+Processamento: Verificar se o número é ímpar ou par
+Saída: Informar se o número é impar ou par
+
+algoritmo verificar
+
+procedimento par_impar (n: inteiro)
+
+    inicio
+
+        se (n mod 2 = 0) então
+            Escreva("É par")
+        senão
+            Escreva("É ímpar")
+        fim_se
+
+fim_prodimento
+
+var 
+
+    num: inteiro
+
+inicio
+
+    Escreva("Informe um número: ")
+    Leia(num)
+    par_impar(num)
+
+fim
+
+
+

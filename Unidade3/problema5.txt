@@ -1,0 +1,21 @@
+Objetivo: Mostrar todos os números divisíveis por 5 que sejam menores que 200
+Entrada: Nenhuma
+Processamento: Se o número for menor que 200 ver se é divisível por 5
+Sáida: Mostrar todos os valores divisíveis por 5
+
+algoritmo divisivel
+
+var 
+
+    num: inteiro
+
+inicio
+
+    Para num de 1 até 200 passo 1 faça
+        se (num mod 5 = 0) então
+            Escreva(num)
+        fim_se
+    fim_para
+
+Fim
+

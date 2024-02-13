@@ -1,0 +1,38 @@
+Objetivo: Algoritmo que lê números inteiros até ser digitado um valor negativo
+Entrada: Ler os números inteiros digitados
+Processamento: Calcular a média aritmética dos números, o maior e o menor valor
+Saída: Mostrar a média, o maior e o menor valor
+
+algoritmo numeros
+
+var
+
+    num, maior, menor, contador: inteiro
+    media: real
+
+inicio
+
+    Escreva("Informe qualquer número inteiro positivo para começar")
+    Leia(num)
+    media <- 0
+    maior <- 0
+    menor <- 0
+    contador <- 0
+    Enquanto(num > 0) faça
+        contador <- contador + 1
+        Escreva("Informe um número: ")
+        Leia(num)
+        media <- media + num
+        Se (num > maior) então
+            maior <- num
+        fim_se
+        Se (num < menor) então
+            menor <- num
+        fim_se
+    fim_enquanto
+    media <- media / contador
+    Escreva("A média dos números digitados é: ", media)
+    Escreva("O maior número digitado foi: ", maior)
+    Escreva("O menor número digitado foi: ", menor)
+
+fim

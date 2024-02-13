@@ -1,0 +1,20 @@
+Objetivo: Imprimir todas as tabuadas do 1 ao 10
+Entrada: Nenhuma
+Processamento: Calcular o valor de cada expressão da tabuada
+Saída: Mostrar a tabuada do 1 ao 10
+
+algoritmo tabuada
+
+var
+
+    resultado, multiplicando, multiplicado: inteiro
+
+inicio
+
+    Para multiplicando de 1 até 10 passo 1 faça
+        Para multiplicado de 1 até 10 passo 1 faça
+            Escreva(multiplicado, " x ", multiplicado, " = ", multiplicando * multiplicado)
+        fim_para
+    fim_para
+
+fim

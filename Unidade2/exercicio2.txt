@@ -1,0 +1,25 @@
+Objetivo: Informar a classe eleitoral da pessoa a partir da idade
+Entrada: Ler a idade da pessoa
+Processamento: Verificar se a pessoa é: não eleitor (idade < 16); eleitor obrigatório (idade > 18) e (idade < 65); eleitor facultativo (idade >= 16) e (idade < 18) e (idade >= 65)
+Saída: Escrever a classe eleitoral que a pessoa se enquadra
+
+algoritmo eleitores
+
+    idade: inteiro
+
+inicio
+
+    Escreva("Informe sua idade: ")
+    Leia(idade)
+
+    se (idade < 16) então
+        Escreva("Não eleitor")
+    fim_se
+    se (idade >= 18) e (idade < 65) então
+        Escreva(Eleitor obrigatório)
+    fim_se
+    se (idade >= 16) e (idade < 18) ou (idade >= 65) então
+        Escreva("Eleitor facultativo")
+    fim_se
+
+fim

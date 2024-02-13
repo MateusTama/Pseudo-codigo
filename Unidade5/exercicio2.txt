@@ -1,0 +1,27 @@
+Objetivo: Sub-rotina que recebe um número e apresenta a raiz quadrada deste
+Entrada: Ler um número
+Processamento: Calcular a raiz quadrada deste número
+Saída: Informar a raiz quadrada
+
+algoritmo quadrada
+
+funcao raiz (num: real) : real
+
+    inicio
+
+        retorne num ** (1 / 2)
+
+fim_funcao
+
+var
+
+    resultado, num: real
+
+inicio
+
+    Escreva("Informe um número: ")
+    Leia(num)
+    resultado <- raiz(num)
+    Escreva("A raiz quadrada desse número é: ", resultado)
+
+fim

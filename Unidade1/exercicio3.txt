@@ -1,0 +1,24 @@
+Objetivo: Calcular o valor a pagar e o valor de desconto de um produto
+Entrada: Obter Valor do produto e valor do desconto
+Processamento: Calcular o valor de desconto e subtrair o valor do produto
+Saída: Mostrar o valor do desconto e o valor do produto.
+
+algoritmo produto
+
+var
+
+    valor_produto, valor_desconto, preco_final, desconto: real
+
+início
+
+    Escreva("Digite o valor do produto: ")
+    Leia(valor_produto)
+    Escreva("Digite o valor do desconto: ")
+    Leia(valor_desconto)
+    desconto <- valor_produto * (valor_desconto/100)
+    preco_final <- valor_produto - desconto
+    Escreva("Valor do desconto sobre o produto", desconto)
+    Escreva("Valor do produto com desconto: ", preco_final)
+
+Fim
+

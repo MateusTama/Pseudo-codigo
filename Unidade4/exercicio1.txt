@@ -1,0 +1,22 @@
+Objetivo: Ler 30 números inteiros e imprimir eles de ordem contrária
+Entrada: Ler 30 números inteiros
+Processamento: Ordená-los de ordem contrária
+Saída: Imprimir os números inteiros de ordem contrária a de leitura
+
+algoritmo contrario
+
+var
+
+    nums: vetor[1..30] de inteiros
+    indice: inteiros
+
+inicio
+
+    Para indice de 1 até 30 passo 1 faça
+        Escreva("Informe o ", indice, " número inteiro: ")
+        Leia(nums[indice])
+    fim_para
+    Para indice de 1 até 30 passo -1 faça
+        Escreva(nums[indice])
+    fim_para
+fim

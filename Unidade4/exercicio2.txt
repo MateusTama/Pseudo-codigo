@@ -1,0 +1,35 @@
+Objetivo: Ler 2 matrizes 5x5 e imprima a diferença entre elas
+Entrada: Ler duas matrizes 5x5
+Processamento: Calcular a diferença entre as duas matrizes
+Saída: Imprimir a diferença entre as duas matrizes
+
+algoritmo mat
+
+var
+
+    A, B, C: vetor[1..5, 1..5] de inteiro
+    indice_linha, indice_coluna: inteiro
+
+inicio
+
+    Para indice_linha de 1 até 5 passo 1 faça
+        Escreva("Primeira matriz")
+        Para indice_coluna de 1 até 5 passo 1 faça
+            Escreva("Informe o valor da ", indice_coluna, " coluna da ", indice_linha, " linha")
+            Leia(A[indice_linha][indice_coluna])
+        fim_para
+    fim_para
+    Para indice_linha de 1 até 5 passo 1 faça
+        Escreva("Segunda matriz")
+        Para indice_coluna de 1 até 5 passo 1 faça
+            Escreva("Informe o valor da ", indice_coluna, " coluna da ", indice_linha, " linha")
+            Leia(B[indice_linha][indice_coluna])
+            C[indice_linha][indice_coluna] <- A[indice_linha][indice_coluna] - B[indice_linha][indice_coluna]
+        fim_para
+    fim_para
+    Para indice_linha de 1 até 5 passo 1 faça
+        Para indice_coluna de 1 até 5 passo 1 faça
+            Escreva(C[indice_linha][indice_coluna])
+        fim_para
+    fim_para
+fim

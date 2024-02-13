@@ -1,0 +1,82 @@
+Objetivo: Algoritmo para cadastro 10 de pessoas. Elaborar um menu que permita: 1-Cadastrar 10 pessoas. 2-Ordenar por idade. 3-Apresentar a média de peso das pessoas. 4-Apresentar o nome das pessoas acima de 50kg. 5-Sair do programa.
+Entrada: Ler nome, idade, altura e peso. Ler as opcoes do menu
+Processamento: Cadastrar as 10 pessoas e executar as opções do menu
+Saída: Informar as pessoas cadastradas, apresentar a média das idades, apresentar o nome das pessoas acima de 50kg.
+
+algoritmo cadastro
+
+Tipo
+
+    pessoa = registro
+    nome: caractere
+    idade: inteiro
+    altura: real
+    peso: real
+
+fim_registro
+
+var
+
+    pessoas: vetor[1..10] de pessoa
+    indice, indice_aux, opcao: inteiro
+    media: real
+    aux: pessoa
+
+inicio
+
+    opcao <- 5
+    Enquanto (opcao <> 0) faça
+        Escreva("Escolha uma opção: ")
+        Escreva("Digite '1' para cadastrar 10 pessoas.")
+        Escreva("Digite '2' para ordenar por idade.")
+        Escreva("Digite '3' para mostrar a média da idade das pessoas.")
+        Escreva("Digite '4' para apresentar o nome das pessoas acima de 50kg.")
+        Escreva("Digite '0' para sair.")
+        Se (opcao = 1) então
+            Para indice de 1 até 10 passo 1 faça
+                Escreva("Informe o nome da ", indice, " pessoa: ")
+                Leia(pessoas[indice].nome)
+                Escreva("Informe a idade da ", indice, " pessoa: ")
+                Leia(pessoas[indice].idade)
+                Escreva("Informe a altura da ", indice, " pessoa: ")
+                Leia(pessoas[indice].altura)
+                Escreva("Informe o peso da ", indice, " pessoa: ")
+                Leia(pessoas[indice].peso)
+            fim_para
+        fim_se
+        Se (opcao = 2) então
+            Para indice de 1 até 9 passo 1 faça
+                Para indice_aux de indice+1 até 10 passo 1 faça
+                    Se (pessoas[indice].idade > pessoas[indice_aux].idade)
+                    aux.nome <- pessoas[indice].nome
+                    aux.idade <- pessoas[indice].idade
+                    aux.peso <- pessoas[indice].peso
+                    aux.altura <- pessoas[indice].altura
+                    pessoas[indice].nome <- pessoas[indice_aux].nome
+                    pessoas[indice].idade <- pessoas[indice_aux].idade
+                    pessoas[indice].peso <- pessoas[indice_aux].peso
+                    pessoas[indice].altura <- pessoas[indice_aux].altura
+                    pessoas[indice_aux].nome <- aux.nome
+                    pessoas[indice_aux].idade <- aux.idade
+                    pessoas[indice_aux].peso <- aux.peso
+                    pessoas[indice_aux].altura <- aux.altura
+                fim_para
+            fim_para
+        fim_se
+        Se (opcao = 3) então
+            media <- 0
+            Para indice de 1 até 10 passo 1 faça
+                soma <- soma + pessoas[indice].idade
+            fim_para
+            Escreva("A média das idades é: ", media / 10)
+        fim_se
+        Se (opcao = 4) então
+            Escreva("Pessoas acima de 50kg: ")
+            Para indice de 1 até 10 passo 1 faça
+                Se (pessoas[indice].peso > 50)
+                    Escreva(pessoas[indice].nome)
+                fim_se
+            fim_para
+        fim_se
+    fim_enquanto
+fim

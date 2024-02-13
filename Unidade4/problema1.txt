@@ -1,0 +1,29 @@
+Objetivo: Ler 50 números inteiros em vetor e imprimir o maior e o menor
+Entrada: Ler 50 números inteiros
+Processamento: Encontrar o maior e o menor
+Saída: Informar o maior e o menor
+
+algoritmo num
+
+var 
+
+    numeros: vetor[1..50] de inteiro
+    indice, maior, menor: inteiro
+
+inicio
+
+    menor <- 0
+    maior <- 0
+    Para indice de 1 até 50 passo 1 faça
+        Escreva("Informe o ", indice, " número inteiro: ")
+        Leia(numeros[indice])
+        se (numeros[indice] > maior) então
+            maior <- numeros[indice]
+        fim_se
+        se (numeros[indice] < menor) então
+            menor <- numeros[indice]
+        fim_se
+    fim_para
+    Escreva("O maior número do vetor é: ", maior)
+    Escreva("O menor número do vetor é: ", menor)
+fim

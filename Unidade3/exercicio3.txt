@@ -1,0 +1,22 @@
+Objetivo: Algoritmo que lê números inteiros até que seja digitado algum com valor negativo. Após isso informar quantos números inteiros foram informados
+Entrada: Ler os números digitados
+Processamento: Contar quantos números inteiros foram digitados e verificar se o número for negativo para parar o programa
+Saída: Informar quantos números foram digitados
+
+algoritmo numeros_int
+
+var
+
+    num, acumulador: inteiro
+
+inicio
+
+    acumulador <- 0
+    Repita
+        Escreva("Digite um número inteiro: ")
+        Leia(num)
+        Se (num > 0) então
+            acumulador <- acumulador + 1
+        fim_se
+    até_que (num < 0)
+fim

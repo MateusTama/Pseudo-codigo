@@ -1,0 +1,57 @@
+Objetivo: Ler matricula, nome, vocacao e salario de 30 professores. Permitir a busca atráves da matrícula e é apresentado a vocacao e o salário. Se a matrícula não existir informar ao usuário
+Entrada: Ler matricula, nome, vocacao e salario de 30 professores e a matrícula de busca
+Processamento: Encontrar o professor da matrícula digitada
+Saída: Imprimir a vocação e o salário do professor se ele existir. Caso contrário informar que não existe professor com essa matrícula
+
+algoritmo registrar
+
+Tipo
+
+professor = registro
+matricula: inteiro
+nome: caractere
+vocacao: caractere
+salario: real
+
+fim_registro
+
+var
+
+    professores: vetor[1..30] de professor
+    indice, matricula_busca, aux: inteiro
+    acha: falso
+
+inicio
+
+    Para indice de 1 até 30 passo 1 faça
+        Escreva(indice, " professor.")
+        Escreva("Informe a matrícula do professor: ")
+        Leia(professores[indice].matricula)
+        Escreva("Informe o nome do professor: ")
+        Leia(professores[indice].nome)
+        Escreva("Informe a vocação do professor: ")
+        Leia(professores[indice].vocacao)
+        Escreva("Informe o salário do professor: ")
+        Leia(professores[indice].salario)
+    fim_para
+    Repita
+        Escreva("Digite '1' caso queira buscar um professor pela matrícula. Caso não queira digite '0': ")
+        Leia(resp)
+        Escreva("Digite a matrícula do professor que você deseja buscar: ")
+        Leia(matricula_busca)
+        acha <- falso
+        Para indice de 1 até 30 passo 1 faça
+            se (professores[indice].matricula = matricula_busca) então
+                acha <- verdadeiro
+                aux <- indice
+            fim_se
+        fim_para
+        se (acha = verdadeiro) então
+            Escreva("Professor encontrado.")
+            Escreva("Vocação: ", professores[aux].vocacao)
+            Escreva("Salário: ", professores[aux].salario)
+        senão
+            Escreva("Professor não encontrado.")
+        fim_se
+    até_que(resp = 0)
+fim

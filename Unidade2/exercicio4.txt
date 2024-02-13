@@ -1,0 +1,41 @@
+Objetivo: Informar o valor de aumento do salário de acordo com o seu cargo
+Entrada: Ler o salário do funcionário e o código do cargo
+Processamento: Calcular o valor de aumento do salário a partir do código do cargo e o valor final do pagamento ao funcionário
+Saída: Apresentar o cargo desempenhado pelo funcionário, o valor de aumento em relação ao seu salário e o novo salário com o aumento
+
+algoritmo sal
+
+var 
+
+    salario, valor_aumento, salario_final: real
+    cod_cargo: inteiro
+
+inicio
+
+    Escreva("Informe o salário: ")
+    Leia(salario)
+    Escreva("Informe o código do seu cargo (1,2,3,4): ")
+    Leia(cod_cargo)
+
+    se (cod_cargo = 1) então
+        valor_aumento <- salario * 0.50
+        Escreva("Seu cargo é: Serviços Gerais")
+    fim_se
+    se (cod_cargo = 2) então
+        valor_aumento <- salario * 0.30
+        Escreva("Seu cargo é: Vigia")
+    fim_se
+    se (cod_cargo = 3) então
+        valor_aumento <- salario * 0.25
+        Escreva("Seu cargo é: Recepcionista")
+    fim_se
+    se (cod_cargo = 4) então
+        valor_aumento <- salario * 0.15
+        Escreva("Seu cargo é: Vendedor")
+    fim_se
+
+    salario_final <- salario + valor_aumento
+    Escreva("O valor de aumento em relação ao salário original é: ", valor_aumento)
+    Escreva("Seu salário com o aumento é: ", salario_final)
+
+fim

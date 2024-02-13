@@ -1,0 +1,38 @@
+Objetivo: Calcular a comissão de venda do vendedor
+Entrada: Ler a matrícula do vendedor, o seu nome, seu salário fixo e o seu total de vendas
+Processamento: Calcular a comissao sabendo que, se o valor de vendas for menor que 1500, sua comissão é 2%, se for maior que 1500 é 4%
+Saída: Mostrar o nome do vendedor, matrícula, salário fixo e salário total 
+
+algoritmo vendedor
+
+var
+
+    matricula: inteiro
+    salario_fixo, salario_total, comissao, total_vendas: real
+    nome: caractere[50]
+
+inicio
+
+    Escreva("Nome do vendedor: ")
+    Leia(nome)
+    Escreva("Matricula do vendedor: ")
+    Leia(matricula)
+    Escreva("Salário do vendedor: ")
+    Leia(salario_fixo)
+    Escreva("Qual o seu total de vendas (valor): ")
+    Leia(total_vendas)
+
+    Se (total_vendas < 1500) então
+        comissao <- total_vendas * 0.02
+    Senão
+        comissao <- total_vendas * 0.04
+    fim_se
+
+    salario_total <- salario_fixo + comissao 
+    
+    Escreva("Nome do vendedor: ", nome)
+    Escreva("Matrícula do vendedor: ", matricula)
+    Escreva("Salário fixo do vendedor: ", salario_fixo)
+    Escreva("Salário total do vendedor: ", salario_total)
+
+Fim    

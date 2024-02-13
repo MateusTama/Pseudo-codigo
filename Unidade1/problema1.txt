@@ -1,0 +1,10 @@
+Objetivo: passo a passo para pagar uma conta de luz em um caixa eletrônico
+
+1. Pegar a conta de luz a ser paga.
+2. Ir para o seu banco.
+3. Se direcionar para o caixa eletrônico.
+4. Inserir seu cartão no caixa eletrônico.
+5. Digitar sua senha.
+6. Selecione a opção "Pagamentos" no caixa eletrônico.
+7. Posicione o código de barras da sua conta de luz no leitor de código de barras do caixa eletrônico.
+8. Confirme o pagamento.

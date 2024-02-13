@@ -1,0 +1,36 @@
+Objetivo: receber um valor em segundos e retornar o valor em horas, minutos e segundos
+Entrada: Ler um valor em segundos
+Procedimentos: Calcular o valor em horas, minutos e segundos
+Saída: Informar o valor em horas, minutos e segundos
+
+algoritmo conversao
+
+procedimento converter(segundos: inteiro) : real
+
+    var
+
+        horas, minutos, seg: real
+
+    inicio
+
+        horas <- segundos / 3600
+        resto <- segundos mod 3600
+        minutos <- resto / 60
+        seg <- resto mod 60
+        Escreva("Horas: ", horas)
+        Escreva("Minutos: ", minutos)
+        Escreva("Segundos: ", seg)
+
+fim_procedimento
+
+var
+
+    segundos: inteiro
+
+inicio
+
+    Escreva("Informe um valor em segundos: ")
+    Leia(segundos)
+    procedimento(segundos)
+
+fim

@@ -1,0 +1,38 @@
+Objetivo: Encontrar o maior e o menor número dentro de uma quantidade de números
+Entrada: Ler uma determinada quantidade de números
+Processamento: Encontrar o maior e o menor número dentre as números informados
+Saída: Mostrar o maior e o menor número
+
+algoritmo num
+
+var
+
+    qtdNumeros, numAtual, contador: inteiro
+    maior, menor: real
+
+inicio
+
+    Escreva("Quantos números você deseja informar: ")
+    Leia(qtdNumeros)
+    menor <- 0
+    maior <- 0
+    contador <- 1
+    Enquanto(contador <= qtdNumeros) faça
+        Escreva("Informe o ", contador, " número: ")
+        Leia(numAtual)
+        Se (contador = 1) então
+            maior <- numAtual
+            menor <- numAtual
+        fim_se
+        Se (numAtual > maior)
+            maior <- numAtual
+        fim_se
+        Se(numAtual < menor)
+            menor <- numAtual
+        fim_se
+        contador <- contador + 1
+    fim_enquanto
+    Escreva("Maior número: ", maior)
+    Escreva("Menor número: ", menor)
+
+Fim

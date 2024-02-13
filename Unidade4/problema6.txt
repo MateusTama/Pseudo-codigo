@@ -1,0 +1,24 @@
+Objetivo: Receber duas matrizes de ordem 5 e imprimir a soma entre elas
+Entrada: Ler as duas matrizes de ordem 5
+Processamento: Efetuar a soma entre as matrizes
+Saída: Imprimir a soma das matrizes
+
+algoritmo sum
+
+var
+
+    matriz, matriz1, matriz_soma, matriz_diferenca: vetor[1..5, 1..5] de inteiro
+    indice_a, indice_b: inteiro
+
+inicio
+
+    matriz <- [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]]
+    matriz1 <- [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]]
+
+    Para indice_a de 1 até 5 passo 1 faça
+        Para indice_b de 1 até 5 passo 1 faça 
+            matriz_soma[indice_a][indice_b] <- matriz[indice_a][indice_b] + matriz1[indice_a][indice_b]
+            matriz_diferenca[indice_a][indice_b] <- matriz[indice_a][indice_b] - matriz1[indice_a][indice_b]
+        fim_para
+    fim_para
+fim

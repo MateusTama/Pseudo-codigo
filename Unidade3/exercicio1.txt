@@ -1,0 +1,20 @@
+Objetivo: Imprimir a palavras "ALGORITMOS" no número de vezes requisitado
+Entrada: Ler o número de vezes para repetir a palavras
+Processamento: Não há
+Saída: Imprimir a palavra quantas vezes foi informado
+
+algoritmo repetir
+
+var 
+
+    num_vezes, indice: inteiro
+
+inicio
+
+    Escrever("Quantas vezes você quer informar a palavra 'ALGORITMOS': ")
+    Leia(num_vezes)
+    Para indice de 1 até num_vezes passo 1 faça
+        Escreva("ALGORITMOS")
+    fim_para
+    
+fim

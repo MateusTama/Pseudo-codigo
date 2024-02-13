@@ -1,0 +1,39 @@
+Objetivo: Imprimir nome e cada nota do aluno, além disso mostrar o média da turma e a média do aluno
+Entrada: Ler nome e quatro notas de cada aluno
+Processamento: Calcular média do aluno e média geral da turma. Mostrar nome, notas e médias.
+Sáida: Imprimir nome, notas, média da turma e média de cada aluno
+
+algoritmo turma
+
+var
+
+    nomes: vetor[1..20] de caractere
+    notas: vetor[1..20, 1..4] de real
+    media: vetor[1..20] de real
+    media_turma: real
+    indice, indice1: inteiro
+
+inicio
+
+    Para indice de 1 até 20 passo 1 faça
+        Escreva("Informe o nome do ", indice, " aluno: ")
+        Leia(nomes[indice])
+        Para indice1 de 1 até 4 passo 1 faça
+            Escreva("Insira a ", indice1, " nota do aluno: ")
+            Leia(notas[indice][indice1])
+            media[indice] <- media[indice] + notas[indice][indice1]
+        Fim_para
+        media[indice] <- media[indice] / 4
+        media_turma <- media_turma + media[indice]
+    Fim_para
+    Para indice de 1 até 20 passo 1 faça
+        Escreva("Nome do ", indice, " aluno: ", nomes[indice])
+        Para indice1 de 1 até 4 passo 1 faça
+            Escreva(indice1, " nota: ", notas[indice][indice1])
+        Fim_para
+        Escreva("Média do aluno: ", media[indice])
+        media_turma <- media_turma / 20
+        Escreva("Média da turma: ", media_turma)
+    Fim_para
+Fim
+    

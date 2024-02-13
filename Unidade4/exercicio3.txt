@@ -1,0 +1,53 @@
+Objetivo: Criar uma lista telefônica com 20 contatos. O algoritmo deve permitir ao usuário fazer quantas consultas a agenda quiser
+Entrada: Ler 20 contatos (nome, fone, e-mail)
+Processamento: Permitir ao usuário realizar consultas a agenda telefônica através do nome
+Saída: Quando realizar buscas via nome informar o telefone. Se o nome não estiver na agenda informar ao usuário
+
+algoritmo lista
+
+Tipo
+
+    agendaTel = registro
+    nome: caractere
+    fone: caractere
+    email: caractere
+
+fim_registro
+
+var
+
+    agenda: vetor[1..20] de agendaTel
+    indice, resp, aux: inteiro
+    nome_busca: caractere
+    acha: lógico
+
+inicio
+
+    Para indice de 1 até 20 passo 1 faça
+        Escreva("Informe o nome do ", indice, " telefone para cadastro: ")
+        Leia(agenda[indice].nome)
+        Escreva("Informe o telefone do ", indice, " telefone para cadastro: ")
+        Leia(agenda[indice].fone)
+        Escreva("Informe o email do ", indice, " telefone para cadastro: ")
+        Leia(agenda[indice].email)
+    fim_para
+    Escreva("Se você quiser realizar uma busca na agenda telefônica digite '1'. Caso não quiser digite '0': ")
+    Leia(resp)
+    Enquanto (resp <> 0) faça
+        Escreva("Informe o nome que você deseja buscar na agenda telefônica: ")
+        Leia(nome_busca)
+        acha <- falso
+        Para indice de 1 até 20 passo 1 faça
+            Se (agenda[indice].nome = nome_busca) então
+                aux <- indice
+                acha <- verdadeiro
+            fim_se 
+        fim_para
+        Se (acha = verdadeiro) então
+            Escreva("Telefone: ", agenda[aux].fone)
+        senão
+            Escreva("Esse nome não está na agenda.")
+        fim_se
+    fim_enquanto
+fim
+

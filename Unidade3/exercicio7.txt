@@ -1,0 +1,51 @@
+//Repita = loop infinito até a pessoa digitar um valor pretendido?
+
+Objetivo: A partir da idade e do estado civil informar o número de pessoas, casadas, solteiras, viúvas e separadas. O algitmo para quando a idade for igual a 0.
+Entrada: Ler a idade e o estado civil
+Processamento: Atualizar a variável contadora de pessoas casadas, viúvas, solteiras e separadas
+Saída: Informar o número de pessoas casadas, solteiras, viúvas e separadas
+
+algoritmo est_civil
+
+var
+
+    estado_civil: caractere[2]
+    idade, viuvas, solteiras, casadas, separadas: inteiro
+
+inicio
+
+    idade <- inteiro
+    viuvas <- 0
+    casadas <- 0
+    solteiras <- 0
+    separadas <- 0
+
+    Repita
+        Escreva("Informe a idade da pessoa: ")
+        Leia(idade)
+    até_que (idade >= 0)
+    Enquanto (idade <> 0) faça
+        Escreva("Informe o estado civil ('CA', 'SO', 'SE', 'VI'): ")
+        Leia(estado_civil)
+        Se (estado_civil = "CA") então
+            casadas <- casadas + 1
+        fim_se
+        Se (estado_civil = "SO") então
+            solteiras <- solteiras + 1
+        fim_se
+        Se (estado_civil = "SE") então
+            separadas <- separadas + 1
+        fim_se
+        Se (estado_civil = "VI") então
+            viuvas <- viuvas + 1
+        fim_se
+        Escreva("Informe a idade: ")
+        Leia(idade)
+    fim_enquanto
+    Escreva("O número de pessoas casadas é: ", casadas)
+    Escreva("O número de pessoas solteiras é: ", solteiras)
+    Escreva("O número de pessoas separadas é: ", separadas)
+    Escreva("O número de pessoas viuvas é: ", viuvas)
+
+fim
+

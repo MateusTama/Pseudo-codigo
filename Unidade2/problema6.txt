@@ -1,0 +1,39 @@
+Objetivo: Calcular o valor do crédito que pode ser concedido ao cliente
+Entrada: Ler o saldo médio dos clientes
+Processamento: Calcular o valor do crédito que pode ser concedido ao cliente de acordo com o seu saldo médio. Clientes com saldo médio menor que 500: não podem receber crédito. Clientes com saldo entre 501 e 1000: receber crédito de até 35% em relação ao saldo médio. Clientes com saldo entre 1001 e 3000: podem receber créditos de até 50% do valor médio do saldo. Clientes com saldo maior que 3001: podem receber créditos de até 75% do valor médio do saldo.
+Saída: Mostrar o valor do crédito que pode ser concedido ao cliente
+
+algoritmo emprestimo
+
+var
+
+    saldo_medio, valor_credito, juros, credito_juros: real
+
+const
+
+    juros <- 0.03
+
+inicio
+
+    Entrada("Informe seu saldo médio: ")
+    Leia(saldo_medio)
+    se (saldo_medio < 500) então
+        Escreva("Você não tem direito a crédito")
+        valor_credito <- 0
+    fim_se
+    se (saldo_medio > 501) e (saldo_medio < 1000) então
+        Escreva("Você tem direito a crédito")
+        valor_credito <- saldo_medio * 0.35
+    fim_se
+    se (saldo_medio > 1001) e (saldo_medio < 3000) então
+        Escreva("Você tem direito a crédito")
+        valor_credito <- saldo_medio * 0.50
+    fim_se
+    se (saldo_medio > 3001) então
+        Escreva("Você tem direito a crédito")
+        valor_credito <- saldo_medio * 0.75
+    fim_se
+
+    Escreva("Seu valor disponível para crédito é: ", valor_credito)
+    credito_juros <- valor_credito * juros
+    Escreva("Com os juros de 3% o valor final do empréstimo é: ", credito_juros)

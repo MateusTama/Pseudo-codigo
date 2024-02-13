@@ -1,0 +1,33 @@
+Objetivo: Algoritmo que receba por um ano os valores das contas semanais a pagar por mês
+Entrada: Ler o valor semanal de cada conta
+Processamento: Calcular o valor mensal das contas e o valor anual total
+Saida: Informar o valor mensal e o valor anual a ser pago
+
+algoritmo pagar
+
+var
+
+    contas: vetor[1..12, 1..4] de real
+    indice, indice_semana: inteiro
+    somaMensal, somaTotal: real
+
+inicio
+
+    Para indice de 1 até 12 passo 1 faça
+        Para indice_semana de 1 até 4 faça
+            Escreva("Informe o valor de cada conta semanal: ")
+            Leia(contas[indice][indice_semana])
+        fim_para
+    fim_para
+    somaTotal <- 0
+    Para indice de 1 até 12 passo 1 faça
+        soma <- 0
+        Para indice_semana de 1 até 4 passo 1 faça
+            somaMensal <- soma + contas[indice][indice_semana]
+        fim_para
+        somaTotal <- somaTotal + somaMensal
+        Escreva("Mês: ", indice, ". O total de contas a pagar nesse mês é: ", somaMensal)
+    fim_para
+    Escreva("O total de contas a pagar no ano é: ", somaTotal)
+fim
+    

@@ -1,0 +1,23 @@
+Objetivo: Calcular área e perimetro de um círculo 
+Entrada: Obter o valor do raio do círculo
+Processamento: Calcular o valor da área do círculo (A = pi.r^2). Calcular o perímetro do círculo (ou circunferência) = (C = 2pi.r)
+Saída: Mostrar o valor da área do círculo e o valor do perímetro do círculo
+
+algoritmo circulo
+
+    raio, area, perimetro, pi: real
+
+const
+
+    pi <- 3,14
+
+inicio
+
+    Escreva("Digite o valor do raio do círculo: ")
+    Leia(raio)
+    area = pi * raio**2
+    perimetro = 2 * pi * raio
+    Escreva("Valor da área: ", area)
+    Escreva("Valor do perímetro: ", perimetro)
+
+Fim

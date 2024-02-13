@@ -1,0 +1,35 @@
+Objetivo: Resolver equações do segundo grau
+Entrada: Valor de a, b e c (ax^2 + bx + c)
+Processamento: Calcular o valor da equação utilizando a fórmula de bhaskara
+Saída: Imprimir o valor da raiz
+
+algoritmo equacao
+
+var
+
+    a, b, c, x1, x2, delta: real
+
+inicio
+
+
+    Escreva("Informe o valor de a: ")
+    Leia(a)
+    Escreva("Informe o valor de b: ")
+    Leia(b)
+    Escreva("Informe o valor de c: ")
+    Leia(c)
+    delta = (b ** 2 - 4 * a * c) ** 1/2
+    Se (delta < 0) então
+        Escreva("Essa equação envolve números imaginários") 
+    fim_se
+    Se (delta = 0) então
+        x1 = -b / 2 * a
+        Escreva("A raiz dessa equação é: ", x1)
+    fim_se
+    Se (delta > 0) então
+        x1 = -b + delta / 2 * a
+        x2 = -b - delta / 2 * a
+        Escreva("As raízes dessa equação são: ", x1, "e ", x2)
+    fim_se
+
+fim

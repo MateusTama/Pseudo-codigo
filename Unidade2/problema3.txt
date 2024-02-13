@@ -1,0 +1,44 @@
+Objetivo: Informar quantos números são negativos
+Entrada: Ler 5 números
+Processamento: Verificar quantos números dos 5 são negativos
+Saída: Informar quantos números são negativos
+
+algoritmo verificador
+
+var
+
+    n1, n2, n3, n4, n5: real
+    contador_negativos: inteiro
+
+inicio
+
+    Escreva("Informe um número: ")
+    Leia(n1)
+    Escreva("Informe um número: ")
+    Leia(n2)
+    Escreva("Informe um número: ")
+    Leia(n3)
+    Escreva("Informe um número: ")
+    Leia(n4)
+    Escreva("Informe um número: ")
+    Leia(n5)
+
+    se (n1 < 0) então
+        contador_negativos += 1
+    fim_se
+    se (n2 < 0) então
+        contador_negativos += 1
+    fim_se
+    se (n3 < 0) então
+        contador_negativos += 1
+    fim_se
+    se (n4 < 0) então
+        contador_negativos += 1
+    fim_se
+    se (n5 < 0) então
+        contador_negativos += 1
+    fim_se
+
+    Escreva("A quantidade de números negativos é: ", contador_negativos)
+
+fim

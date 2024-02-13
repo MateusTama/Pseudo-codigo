@@ -1,0 +1,29 @@
+Objetivo: Algoritmo que através de uma função retorne um valor em reais a partir de um valor em euros. A cotação deve ser fornecida pelo usuário
+Entrada: Ler um valor em euros e o valor da cotação do euro
+Processamento: Calcular o valor em reais
+Saída: Informar o valor em reais
+
+algoritmo conversao
+
+funcao converter (cotacao: real, qtdEuro: real) : real
+
+    inicio
+
+        retorne cotacao * qtdEuro
+
+fim_funcao
+
+var 
+
+    cotacao, qtdEuro, resultado: real
+
+inicio
+
+    Escreva("Informe a cotação do Euro: ")
+    Leia(cotacao)
+    Escreva("Informe a quantidade de euro disponível: ")
+    Leia(qtdEuro)
+    resultado <- converter(cotacao, qtdEuro)
+    Escreva(qtdEuro, " em reais é equivalente a: ", resultado)
+    
+fim

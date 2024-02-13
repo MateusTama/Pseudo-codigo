@@ -1,0 +1,44 @@
+Objetivo: Algoritmo que permite o cadastro de livros
+Entrada: Ler titulo, autor, editora, edição e ano
+Processamento: Efetuar o cadastro do livro
+Saída: Nenhum
+
+algoritmo cadastro
+
+Tipo
+
+    livro = registro
+    titulo: caractere
+    autor: caractere
+    editora: caractere
+    edicao: inteiro
+    ano: inteiro
+
+fim_registro
+
+var
+
+    livros: vetor[1..100] de livro
+    contador: inteiro
+    resp: caractere[3]
+
+inicio
+
+    resp <- "sim"
+    contador <- 0
+    Enquanto (resp = "sim") então
+        contador <- contador + 1
+        Escreva("Informe o título do livro: ")
+        Leia(livros[contador].titulo)
+        Escreva("Informe o autor do livro: ")
+        Leia(livros[contador].autor)
+        Escreva("Informe a editora do livro: ")
+        Leia(livros[contador].editora)
+        Escreva("Informe a edição do livro: ")
+        Leia(livros[contador].edicao)
+        Escreva("Informe o ano do livro: ")
+        Leia(livros[contador].ano)
+        Escreva("Se deseja continuar o cadastro de livros digite 'sim': ")
+        Leia(resp)
+    fim_enquanto
+fim

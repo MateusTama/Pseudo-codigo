@@ -1,0 +1,36 @@
+Objetivo: Calcular o IMC de uma pessoa e informar se está abaixo, normal ou acima do pessoa
+Entrada: Ler peso e altura da pessoa
+Processamento: Calcular o IMC a partir da formula (peso / altura * 2). Resultados: abaixo do peso (IMC < 20); normal (IMC >= 20) e (IMC <= 25); excesso de peso (IMC >= 26) e (IMC <= 30); obeso (IMC >= 31) e (IMC <= 35); obesidade mórbida (IMC > 35).
+Saída: Mostrar a faixa de risco da pessoa
+
+algoritmo indice_massa_corporal
+
+var
+
+    peso, altura, imc: real
+
+inicio
+
+    Escreva("Informe seu peso: ")
+    Leia(peso)
+    Escreva("Informe sua altura: ")
+    Leia(altura)
+    imc <- peso / (altura * 2)
+
+    se (imc < 20) então
+        Escreva("Você está abaixo do peso")
+    fim_se
+    se (imc >= 20) e (imc <= 25) então
+        Escreva("Você está normal")
+    fim_se
+    se (imc >= 26) e (imc <= 30) então
+        Escreva("Você está com excesso de peso")
+    fim_se
+    se (imc >= 31) e (imc <= 35) então
+        Escreva("Você está obeso. Procure ajuda!")
+    fim_se
+    se (imc > 35) então
+        Escreva("Você está com obesidade mórbida. Procure ajuda imediatamente!")
+    fim_se
+
+fim

@@ -1,0 +1,34 @@
+Objetivo: Informar o consumo estimado de combustível a partir do tipo de moto e do percurso em quilômetros (km)
+Entrada: Ler o tipo de moto (A,B,C) e o percurso em km
+Processamento: Calcular o consumo estimado de combustível sabendo que: a moto do tipo A faz 26km/L; a moto do tipo B faz 20km/L; a moto do tipo C faz 7km/L
+Saída: Informar o consumo estimado de combustível
+
+algoritmo consumo
+
+var
+
+    percurso, consumo_estimado: real 
+    moto: caractere[1]
+
+inicio
+
+    Escreva("Informe o tipo da sua moto (A, B, C):")
+    Leia(moto)
+    Escreva("Informe o percurso em km: ")
+    Leia(percurso)
+    
+    se (moto = "A") então
+        consumo_estimado <- percurso / 26
+    fim_se    
+    se (moto = "B") então
+        consumo_estimado <- percurso / 20
+    fim_se    
+    se (moto = "C") então
+        consumo_estimado <- percurso / 7
+    fim_se
+    
+    Escreva("Seu consumo médio estimado para este percurso é: ", consumo_estimado)
+
+Fim
+    
+    

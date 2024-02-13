@@ -1,0 +1,24 @@
+Objetivo: Calcular o faturamento mensal e o faturamento anula de uma locadora de livros
+Entrada: Ler o preço do aluguel mensal de cada livro e a quantidade de livros da locadora
+Processamento: Calcular o faturamento mensal (quant_livros x valor do livro), calcular o faturamento anual se 20% dos livros não forem alugados (faturamento anual - 20%)
+Saída: Mostrar o faturamento mensal e o faturamento anula
+
+algoritmo locadora_livros
+
+var
+
+    quant_livros: inteiro
+    alug_livro, fat_mensal, fat_anual: real
+
+início
+
+    Escreva("Quantos livros possui a locadora: ")
+    Leia(quant_livros)
+    Escreva("Qual o valor do aluguel de cada livro: ")
+    Leia(alug_livro)
+    fat_mensal <- quant_livros * alug_livro
+    fat_anual <- quant_livros * alug_livro * (1 - 0.2) * 12
+    Escreva("Faturamento mensal: ", fat_mensal)
+    Escreva("Faturamento anual: ", fat_anual)
+
+Fim

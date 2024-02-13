@@ -1,0 +1,27 @@
+Objetivo: Receber cem números inteiros e informar se quantos são ímpares e quantos são pares
+Entrada: Ler os cem números inteiros
+Processamento: Verificar se o número é ímpar ou par e incrementar 1 na variável acumuladora
+Saída: Informar quantos são pares e quantos são ímpares
+
+algoritmo par_impar
+
+var
+
+    num, pares, impares, indice: inteiro
+
+inicio
+
+    pares <- 0
+    impares <- 0
+    Para indice de 1 até 100 passo 1 faça
+        Escreva("Informe um número inteiro: ")
+        Leia(num)
+        se (num mod 2 = 0) então
+            pares <- pares + 1
+        senão
+            impares <- impares + 1
+        fim_se
+    fim_para
+    Escreva("Dos 100 números ", pares," são pares e ", impares, " são ímpares.")
+
+fim

@@ -1,0 +1,23 @@
+Objetivo: Imprimir o primeiro caractere de 20 nomes diferentes
+Entrada: Ler 20 nomes
+Processamento: Pegar os 20 nomes, adicionar em uma lista (vetor) e imprimir o 1 caractere de cada nome na lista
+Saída: Imprimir o primeiro caractere dos 20 nomes
+
+algoritmo first_letter
+
+var
+
+    nome: vetor[1..20] de caractere
+    indice: inteiro
+
+inicio
+
+    Para indice de 1 até 20 passo 1 faça
+        Escreva("Informe o ", indice, " nome: ")
+        Leia(nome[indice])
+    Fim_para
+    Para indice de 1 até 20 passo 1 faça
+        Escreva("Primeira letra do ", indice, " nome: ", nome[indice[1]])
+    Fim_para
+
+Fim

@@ -1,0 +1,45 @@
+Primeiro
+
+Algoritmo exe5a
+
+var
+
+    A, B, C: inteiro
+
+início
+
+    A <- 5
+    B <- 30
+    C <- A
+    B <- C
+    A <- B
+    Escreva A
+    Escreva B
+    Escreva C
+
+Fim
+
+Resultado: Vai ser mostrado na tela os valores 5, 5, 5
+
+Segundo
+
+Algoritmo exe5a
+
+var
+
+    A, B, C: inteiro
+
+início
+
+    A <- 5
+    B <- 30
+    C <- A
+    A <- B
+    B <- C
+    Escreva A
+    Escreva B
+    Escreva C
+
+Fim
+
+Resultado: Vai ser mostrado na tela os valores 30, 5, 5

@@ -1,0 +1,114 @@
+Objetivo: Cadastro de produtos para 20 produtos. Crie um menu com as opções: 1-Cadastrar os 20 produtos. 2-Pesquisar produto por código. 3-Classificar por ordem de descrição. 4-Classificar por ordem de código. 5-Apresentar todos os registros. 6-Sair do programa de cadastro.
+Entrada: Ler código, descrição, unidade e preço. Ler as opções para menu
+Processamento: Efetuar o cadastro do produto e as opções presentes no menu (pesquisar, classificar, mostrar e sair)
+Saída: Mostrar todos os registros. Mostrar as pesquisas e classificações.
+
+algoritmo cadastro
+
+Tipo
+
+    produto = registro
+    codigo: inteiro
+    descricao: caractrere
+    unidade: inteiro 
+    preco: real
+
+fim_registro
+
+var
+
+    produtos: vetor[1..20] de produto
+    opcao, indice, cod_busca, indice_aux: inteiro
+    acha: lógico
+    aux: produto
+
+inicio
+
+    opcao <- 6
+    Enquanto (opcao <> 0)
+        Escreva("Informe a opção desejada: ")
+        Escreva("Digite '1' para cadastrar produtos.")
+        Escreva("Digite '2' para pesquisar produtos pelo código.")
+        Escreva("Digite '3' para classificar por ordem de descrição.")
+        Escreva("Digite '4' para classificar por ordem de código.")
+        Escreva("Digite '5' para apresentar todos os registros.")
+        Escreva("Digite '0' para sair.")
+        Leia(opcao)
+        se (opcao = 1) então
+            Para indice de 1 até 20 passo 1 faça
+                Escreva("Informe o código do ", indice, " produto: ")
+                Leia(produtos[indice].codigo)
+                Escreva("Informe a descrição do ", indice, " produto: ")
+                Leia(produtos[indice].descricao)
+                Escreva("Informe a unidade do ", indice, " produto: ")
+                Leia(produtos[indice].unidade)
+                Escreva("Informe o preço do ", indice, " produto: ")
+                Leia(produtos[indice].preco)
+            fim_para
+        fim_se
+        se (opcao = 2) então
+            Escreva("Informe o código para busca: ")
+            Leia(cod_busca)
+            acha <- falso
+            Para indice de 1 até 20 passo 1 faça
+                se (produtos[indice].codigo = cod_busca) então
+                    acha <- verdadeiro
+                fim_se
+            fim_para
+            Se (acha = verdadeiro) então
+                Escreva("Produto encontrado.")
+            senão
+                Escreva("Produto inexistente.")
+            fim_se
+        fim_se
+        se (opcao = 3) então
+            Para indice de 1 até 19 passo 1 faça
+                Para indice_aux de indice+1 até 20 passo 1 faça
+                    se (produtos[indice].descricao > produtos[indice_aux].descricao)
+                        aux.codigo <- produtos[indice].codigo
+                        aux.descricao <- produtos[indice].descricao
+                        aux.unidade <- produtos[indice].unidade
+                        aux.preco <- produtos[indice].preco
+                        produtos[indice].codigo <- produtos[indice_aux].codigo
+                        produtos[indice].descricao <- produtos[indice_aux].descricao
+                        produtos[indice].unidade <- produtos[indice_aux].unidade
+                        produtos[indice].preco <- produtos[indice_aux].preco
+                        produtos[indice_aux].codigo <- aux.codigo
+                        produtos[indice_aux].descricao <- aux.descricao
+                        produtos[indice_aux].unidade <- aux.unidade
+                        produtos[indice_aux].preco <- aux.preco
+                    fim_se
+                fim_para
+            fim_para
+        fim_se
+        se (opcao = 4) então
+            Para indice de 1 até 19 passo 1 faça
+                Para indice_aux de indice+1 até 20 passo 1 faça
+                    se (produtos[indice].codigo > produtos[indice_aux].codigo)
+                        aux.codigo <- produtos[indice].codigo
+                        aux.descricao <- produtos[indice].descricao
+                        aux.unidade <- produtos[indice].unidade
+                        aux.preco <- produtos[indice].preco
+                        produtos[indice].codigo <- produtos[indice_aux].codigo
+                        produtos[indice].descricao <- produtos[indice_aux].descricao
+                        produtos[indice].unidade <- produtos[indice_aux].unidade
+                        produtos[indice].preco <- produtos[indice_aux].preco
+                        produtos[indice_aux].codigo <- aux.codigo
+                        produtos[indice_aux].descricao <- aux.descricao
+                        produtos[indice_aux].unidade <- aux.unidade
+                        produtos[indice_aux].preco <- aux.preco
+                    fim_se
+                fim_para
+            fim_para
+        fim_se
+    fim_enquanto
+    Se (opcao = 5) então
+        Para indice de 1 até 20 passo 1 faça
+            Escreva("Produto: ", indice)
+            Escreva("Código: ", produtos[indice].codigo)
+            Escreva("Descrição: ", produtos[indice].descrição)
+            Escreva("Unidade: ", produtos[indice].unidade)
+            Escreva("Preço: ", produtos[indice].preco)
+        fim_para
+    fim_se
+fim

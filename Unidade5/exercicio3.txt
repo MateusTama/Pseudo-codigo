@@ -1,0 +1,43 @@
+Objetivo: Sub-rotina que recebe 3 valores de entrada e retorne apenas o maior
+Entrada: Ler os 3 números inteiros
+Processamento: Verificar qual dos números é o maior
+Saída: Informar o maior número dentre os 3
+
+algoritmo verificar
+
+funcao maior (n1: real, n2: real, n3: real) : real
+
+    inicio
+
+        Se (n1 > n2) então
+            Se (n1 > n3) então
+                retorne n1
+            senão
+                retorne n3
+            fim_se
+        senão
+            se (n2 > n3) então
+                retorne n2
+            senão
+                retorne n3
+            fim_se
+        fim_se 
+
+fim_funcao
+
+var 
+
+    resultado, n1, n2, n3: real
+
+inicio
+
+    Escreva("Informe o primeiro número: ")
+    Leia(n1)
+    Escreva("Informe o segundo número: ")
+    Leia(n2)
+    Escreva("Informe o terceiro número: ")
+    Leia(n3)
+    resultado <- maior(n1, n2, n3)
+    Escreva("O maior número dentre os 3 é: ", resultado)
+
+fim

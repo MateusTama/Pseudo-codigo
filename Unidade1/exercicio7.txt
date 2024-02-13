@@ -1,0 +1,22 @@
+Objetivo: Fornecer a raiz quadrada e o quadrado de um número inteiro
+Entrada: Ler um número inteiro
+Processamento: Efetuar a raiz quadrada e o quadrado do número fornecido
+Saída: Mostrar ao usuário a raiz quadrada e o quadrado do número fornecido
+
+algoritmo operacoes
+
+var 
+
+    raiz : real
+    num_int, quadrado: inteiro
+
+início
+
+    Escreva("Insira um número inteiro: ")
+    Leia(num_int)
+    raiz <- sqrt(num_int)
+    quadrado <- sqr(num_int)
+    Escreva("Raiz quadrada: ", raiz)
+    Escreva("Quadrado: ", quadrado)
+
+Fim

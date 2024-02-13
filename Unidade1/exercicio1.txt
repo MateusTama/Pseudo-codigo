@@ -1,0 +1,22 @@
+Objetivo: Obter um número, calcular e mostrar o antecessor, sucessor e o número
+Entrada: Obter um número
+Processamento: Calcular o sucessor (num+1) e o antecessor (num-1) desse número
+Saída: Mostrar o número, o antecessor e o sucessor
+
+algoritmo antecessor_sucessor
+
+var 
+
+    num, antecessor, sucessor: real
+
+início
+
+    Escreva("Digite um número: ")
+    Leia(num)
+    antecessor <- num-1
+    sucessor <- num+1
+    Escreva("Número: ", num)
+    Escreva("Antecessor: ", antecessor)
+    Escreva("Sucessor: ", sucessor)
+
+Fim

@@ -1,0 +1,44 @@
+Objetivo: Algoritmo que recebe o preço de compra e venda de 30 produtos e informe quantos apresentam lucro > 30% e quantos apresentar lucro < 15%
+Entrada: Ler o preço de compra e o preço de venda do produto
+Processamento: Calcular quantos produtos possuem lucro < 15% e quantos apresentam lucro > 30%
+Saída: Informe quantos produtos possuem lucro < 15%  e quantos apresentam lucro > 30%
+
+algoritmo prod
+
+Tipo
+
+    dict_produto = registro
+    preco_compra: real
+    preco_venda: real
+    lucro: real
+
+fim_registro
+
+var 
+
+    produto: vetor[1..30] de dict_produto
+    indice: inteiro
+    lucro_menor, lucro_maior: inteiro
+
+inicio
+
+    lucro_menor <- 0
+    lucro_maior <- 0
+    Para indice de 1 até 30 passo 1 faça
+        Escreva("Informe o preço de compra do ", indice, "produto: ")
+        Leia(produto[indice].preco_compra) 
+        Escreva("Informe o preço de venda do ", indice, "produto: ")
+        Leia(produto[indice].preco_venda)
+        produto[indice].lucro <- ((produto[indice].preco_venda - produto[indice].preco_compra) / produto[indice].preco_compra) * 100
+        Se (produto[indice].lucro < 15) então
+            lucro_menor <- lucro_menor + 1
+        fim_se
+        Se (produto[indice].lucro > 30) então
+            lucro_maior <- lucro_maior + 1
+        fim_se
+    fim_para
+    Escreva(lucro_menor, " apresentaram lucro menor que 15%")
+    Escreva(lucro_maior, " apresentam lucro maior que 30%")
+fim
+
+

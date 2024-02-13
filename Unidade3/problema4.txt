@@ -1,0 +1,37 @@
+Objetivo: Algoritmo que lê números inteiros até que seja digitado 0.
+Entrada: Ler os números inteiros digitados
+Processamento: Calcular o número de valores lidos, a média aritmética dos números, a quantidade de números pares e a quantidade de números ímpares
+Saída: Mostrar o número de valores lidos, média aritmética, a quantidade de pares e a quantidade de ímpares
+
+algoritmo numeros
+
+var
+
+    num, media: real
+    pares, impares, qtd: inteiro
+
+inicio
+
+    Escreva("Digite um número diferente de 0 para iniciar o programa: ")
+    Leia(num)
+    qtd <- 0
+    pares <- 0
+    impares <- 0
+    Enquanto(num <> 0) faça
+        Escreva("Digite um número: ")
+        Leia(num)
+        media <- num
+        qtd <- qtd + 1
+        Se (num mod 2 = 0) então
+            pares <- pares + 1
+        senão
+            impares <- impares + 1
+        fim_se
+    fim_enquanto
+    media <- media / 20
+    Escreva("Foram lidos ", qtd, " números.")
+    Escreva("A média dos números é: ", media)
+    Escreva("A quantidade de números pares é: ", pares)
+    Escreva("A quantidade de números ímpares é: ", impares)
+
+Fim

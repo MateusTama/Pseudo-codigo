@@ -1,0 +1,27 @@
+Objetivo: Função que recebe um número e retorna seu valor absoluto
+Entrada: Ler um número
+Processamento: Calcular o valor absoluto do número
+Saída: Informar o valor absoluto do número
+
+algoritmo calcular
+
+funcao absoluto (num: real) : inteiro
+
+    inicio
+
+        retorne ABS(num)
+    
+fim_funcao
+
+var
+
+    num: real
+
+inicio
+
+    Escreva("Informe um número: ")
+    Leia(num)
+    resultado <- absoluto(num)
+    Escreva("O valor absoluto desse número é: ", resultado)
+
+fim

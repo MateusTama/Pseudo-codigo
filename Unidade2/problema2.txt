@@ -1,0 +1,27 @@
+Objetivo: Informar se um número é divisível por 3 e por 7
+Entrada: Ler um número
+Processamento: Verificar se o número é divisível por 3 e por 7
+Saída: Informar se o número é divisível ou não
+
+algoritmo divisivel
+
+var
+
+    numero: real
+
+inicio
+
+    Escreva("Informe um número: ")
+    Leia(numero)
+    
+    Se (numero mod 3 = 0) então
+        Se (numero mod 7 = 0) então
+            Escreva("O número ", numero, "é divisivel por 3 e por 7")
+        senão
+            Escreva("O número ", numero, "não é divisivel por 7")
+        fim_se
+    senão
+        Escreva("O número ", numero, "não é divisivel por 3")
+    fim_se
+
+fim

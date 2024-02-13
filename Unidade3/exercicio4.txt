@@ -1,0 +1,37 @@
+Objetivo: Calcular o valor total da comprar a partir da entrada dos pedidos. O pedido possui 4 campos: número, data (dia, mes e ano), preço unitário e quantidade. Se o usuário informar zero como número do pedido o algoritmo para
+Entrada: Ler os pedidos (número, dia, preço unitário e quantidade) 
+Processamento: Calcular preço total de cada pedido e o preço total da compra. Verificar se o usuário digitou zero.
+Saída: Informar o preço total da compra
+
+algoritmo compra
+
+var
+
+    num_pedido, quantidade: inteiro 
+    preco_unit, preco_pedido, preco_total: real
+    dia: caractere
+
+inicio
+
+    preco_total <- 0
+    Escreva("Informe o número do pedido: ")
+    Leia(num_pedido)
+    Enquanto (num_pedido <> 0) faça
+        Escreva("Informe o dia da compra (dia-mês-ano): ")
+        Leia(dia)
+        Escreva("Informe o preço unitário do produto: ")
+        Leia(preco_unit)
+        Escreva("Informe a quantidade do produto: ")
+        Leia(quantidade)
+        preco_total <- preco_total + quantidade * preco_unit
+        Escreva("Informe o número do pedido: ")
+        Leia(num_pedido)
+    fim_enquanto
+    Escreva("O preço total da compra é: ", preco_total)
+
+fim
+
+
+
+         
+

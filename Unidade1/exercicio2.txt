@@ -1,0 +1,21 @@
+Objetivo: Calcular a área de um triângulo
+Entrada: Obter o valor da base e da altura do triângulo
+Processamento: Cálculo da área do triângulo utilizando a fórmula (A = b.h/2)
+Saída: Mostrar a área do triângulo
+
+algoritmo triangulo
+
+var
+
+    base, altura, area: real
+
+início
+
+    Escreva("Digite o valor da base do triângulo: ")
+    Leia(base)
+    Escreva("Digite o valor da altura do triângulo: ")
+    Leia(altura)
+    area <- base * altura / 2
+    Escreva("A área do triangulo é: ", area)
+
+Fim

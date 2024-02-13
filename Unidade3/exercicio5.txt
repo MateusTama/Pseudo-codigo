@@ -1,0 +1,58 @@
+Objetivo: Ler o nome, idade, peso, sexo e altura dos atletas de um campeonato até o valor "FIM" ser digitado. Após isso informar o nome do atleta de sexo masculino mais alto, o nome da atleta de sexo feminino mais pesada e a média da idade dos atletas
+Entrada: Ler o nome, idade, peso, sexo e altura
+Processamento: Verificar quem é o atleta masculino mais alto e quem é a atleta de sexo feminino mais pesada. Além disso, calcular a média da idade dos atletas
+Saída: Mostrar o nome do atleta masculino mais alto, o nome da atleta feminina mais pesada e a média da idade dos atletas
+
+algoritmo campeonato
+
+var 
+
+    sexo: caractere[1]
+    nome, nome_masc, nome_fem: caractere 
+    idade, contador: inteiro 
+    peso, altura, media, mais_alto, mais_pesado: real
+
+inicio
+
+    media <- 0
+    nome_masc <- ""
+    nome_fem <- ""
+    mais_pesado <- 0
+    mais_alto <- 0
+    contador <- 0
+
+    Escreva("Informe o nome do competidor ou 'FIM' para encerrar o programa: ")
+    Leia(nome)
+    Enquanto (nome <> "FIM") faça
+        Escreva("Informe o sexo ('M' ou 'F'): ")
+        Leia(sexo)
+        Escreva("Informe o peso: ")
+        Leia(peso)
+        Escreva("Informe a altura: ")
+        Leia(altura)
+        Escreva("Informe a idade: ")
+        Leia(idade)
+        contador <- contador + 1
+        media <- media + idade
+        Se (sexo = "M") então
+            Se (altura > mais_alto) então
+                mais_alto = altura
+                nome_masc = nome
+            fim_se
+        senão
+            se (peso > mais_pesado) então
+                mais_pesado = peso
+                nome_fem = nome
+            fim_se
+        fim_se
+        Escreva("Informe o nome: ")
+        Leia(nome)
+    fim_enquanto
+
+    Escreva("Nome do atleta mais alto: ", nome_masc)
+    Escreva("Nome da atleta mais pesada: ", nome_fem)
+    Escreva("A média das idades dos atletas é: ", media/contador)
+
+fim
+
+ 

@@ -1,0 +1,25 @@
+Objetivo: Calcular a área de um triângulo e que não permita dados inválidos (medidas < 0)
+Entrada: Ler o valor da base do triângulo e o valor da altura (b.h/2)
+Processamento: Calcular a área do triangulo a partir destes valores e verificar se foram digitadas medidas negativas
+Saída: Informar a área do triângulo
+
+algoritmo triangulo
+
+var 
+
+    base, altura: real
+
+inicio
+
+    altura <- 0
+    base <- 0
+    Enquanto (altura <= 0) e (base <= 0) faça
+        Escreva("Digite o valor da altura: ")
+        Leia(altura)
+        Escreva("Digite o valor da base: ")
+        Leia(base)
+    fim_enquanto
+    
+    Escreva("O valor da área é: ", base * altura / 2)
+
+fim

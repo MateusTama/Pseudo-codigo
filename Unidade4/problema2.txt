@@ -1,0 +1,31 @@
+Objetivo: Acrescentar 20 números inteiros em cada vetor (A e B) e efetuar a soma dos vetores em um vetor C
+Entrada: Ler os 20 números inteiros em cada vetor A e B
+Processamento: Efetuar a soma dos números inteiros em um vetor C e ordenar o vetor crescentemente via bubblesort
+Saída: Imprimir o vetor C ordenado
+
+algoritmo soma
+
+var 
+
+    A, B, C: vetor[1..20] de inteiros
+    indice, indice_vet, auxiliar: inteiro
+
+inicio
+
+    Para indice de 1 até 20 passo 1 faça
+        Escreva("Informe o primeiro número do vetor A: ")
+        Leia(A[indice])
+        Escreva("Informe o primeiro número do vetor B: ")
+        Leia(B[indice])
+        C[indice] <- A[indice] + B[indice]
+    fim_para 
+    Para indice de 1 até 19 passo 1 faça
+        Para indice_vet de 1 até 20 passo 1 faça
+            Se (C[indice] > C[indice_vet]) então
+                auxiliar <- C[indice]
+                C[indice] <- C[indice_vet]
+                C[indice_vet] <- auxiliar
+            fim_se
+        fim_para
+    fim_para
+fim

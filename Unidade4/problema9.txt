@@ -1,0 +1,92 @@
+Objetivo: Cadastro de 15 professores com um menu que permite o cadastro de professores; imprimir os professores por ordem crescente de salário; pesquisar um professor pela matrícula e informar nome e formação, se existir; sair do programa.
+Entrada: Ler matricula, nome, formação e salário
+Processamento: Cadastrar o professor, buscar professor pela matrícula e ordenar o nome dos professores por ordem crescente de salários
+Saída: Caso requisitado informar nome e formação do professor e imprimir o nome dos professores de acordo com ordem crescente de salário
+
+algoritmo cadastro
+
+Tipo
+
+    professor = registro
+    matricula: inteiro
+    nome: caractere
+    formacao: caractere
+    salario: real
+
+fim_registro
+
+var
+
+    professores: vetor[1..15] de professor
+    indice, indice_med, resp, matricula_busca: inteiro
+    aux: professor
+    acha: lógico
+
+inicio
+
+    Escreva("Para entrar no programa digite '1'. Caso não queira digite '0': ")
+    Leia(resp)
+    Enquanto (resp <> 0) faça
+        Escreva("
+        Digite '1' para cadastrar professores.
+        Digite '2' para ordenar os professores por ordem crescente de salário.
+        Digite '3' para um buscar professor pela matricula.
+        Digite '0' para sair do programa.
+        ")
+        Leia(resp)
+        Se (resp = 1) então
+            Para indice de 1 até 15 passo 1 faça
+                Escreva("Informe a matricula do professor: ")
+                Leia(professores[indice].matricula)
+                Escreva("Informe o nome do professor: ")
+                Leia(professores[indice].nome)
+                Escreva("Informe a formação do professor: ")
+                Leia(professores[indice].formacao)
+                Escreva("Informe o salário do professor: ")
+                Leia(professores[indice].salario)
+            fim_para
+        fim_se
+        se (resp = 2) então
+            Para indice de 1 até 14 passo 1 faça
+                Para indice_med de indice+1 até 15 passo 1 faça
+                    Se (professores[indice].salario > professores[indice_med].salario)
+                        aux.matricula <- professores[indice].matricula
+                        aux.nome <- professores[indice].nome
+                        aux.formacao <- professores[indice].formacao
+                        aux.salario <- professores[indice].salario
+                        professores[indice].matricula <- professores[indice_med].matricula
+                        professores[indice].nome <- professores[indice_med].nome
+                        professores[indice].formacao <- professores[indice_med].formacao
+                        professores[indice].salario <- professores[indice_med].salario
+                        professores[indice_med].matricula <- aux.matricula
+                        professores[indice_med].nome <- aux.nome
+                        professores[indice_med].formacao <- aux.formacao
+                        professores[indice_med].salario <- aux.salario
+                    fim_se 
+                fim_para
+            fim_para
+            Escreva("Nome dos professores por ordem salarial crescente (menor para maior): ")
+            Para indice de 1 até 15 passo 1 faça
+                Escreva(professores[indice].nome)
+            fim_para
+        fim_se
+        se (num = 3) então
+            acha <- falso
+            Escreva("Digite a matrícula do professor a ser buscada: ")
+            Leia(matricula_busca)
+            Para indice de 1 até 15 passo 1 faça
+                Se (professores[indice].matricula = matricula_busca) então
+                    aux <- indice
+                    acha <- verdadeiro
+                fim_se
+            fim_para
+            Se (acha = verdadeiro) então
+                Escreva("Professor encontrado.")
+                Escreva("Nome: ", professor[aux].nome)
+                Escreva("Formação: ", professor[aux].formacao)
+            senão
+                Escreva("Matrícula inexistente.")
+            fim_se
+        fim_se
+    fim_enquanto
+fim

@@ -1,0 +1,30 @@
+Objetivo: Informar se a pessoa é maior de idade, menor de idade ou idoso
+Entrada: Ler o nome e a idade informada pela pessoa
+Processamento: Verificar se a pessoa é maior de idade (entre 18 e 64 anos), menor de idade (menor que 18 anos) ou idoso (maior ou igual a 65 anos)
+Saída: Escrever se a pessoa é maior de idade, menor de idade ou idoso
+
+algoritmo verificar_idade
+
+var
+
+    idade: inteiro
+    nome: caractere[50]
+
+inicio
+
+    Escreva("Informe seu nome: ")
+    Leia(nome)
+    Escreva("Informe sua idade: ")
+    Leia(idade)
+
+    se (idade < 18) então
+        Escreva("Menor de idade")
+    fim_se
+    se (idade >= 18)  e (idade <= 64) então
+        Escreva("Maior de idade")
+    fim_se
+    se (idade >= 65) então
+        Escreva("Idoso")
+    fim_se
+
+fim

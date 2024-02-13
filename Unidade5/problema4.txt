@@ -1,0 +1,40 @@
+Objetivo: Criar uma sub-rotina que apresente o somatório dos n primeiros números pares, sendo n definido pelo usuário
+Entrada: Ler n
+Processamento: Efetuar a somatório dos números pares
+Saída: Informar o valor do somatório
+
+algoritmo somatorio
+
+funcao somar (qtdNum: inteiro) : inteiro
+
+    var
+
+        indice, num, soma: inteiro
+
+    inicio
+
+        soma <- 0
+        Para indice de 1 até qtdNum passo 1 faça
+            Escreva("Informe o ", indice, " número: ")
+            Leia(num)
+            Se (num mod 2 = 0) então
+                soma <- soma + num
+            fim_se
+        fim_para
+
+        retorne soma
+
+fim_funcao
+
+var
+
+    n: inteiro
+
+inicio
+
+    Escreva("Informe o valor de n: ")
+    Leia(n)
+    resultado <- soma(n)
+    Escreva("Resultado do somatório: ", resultado)
+
+fim

@@ -1,0 +1,14 @@
+Para os nomes de variáveis abaixo, marque (C) para os corretos e (I) para os incorretos. Para cada nome incorreto explique o que está errado:
+
+(C) cidade
+(I) endereço_nr = tem o caractere especial "ç"
+(I) media_peso% = caractere especial "%" 
+(I) aluno-nota = sinal de operação aritmética "-"
+(I) media idade = espaço em nome de algoritmo
+(C) a3
+(I) endereco.cep = uso do "." no nome do algoritmo 
+(C) B5
+(C) nome2
+(I) 4cidade = número no início do nome do algoritmo
+(C) cliente_nome
+(I) 1234P = número no início do nome do algoritmo
