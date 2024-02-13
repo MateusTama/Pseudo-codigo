@@ -9,3 +9,5 @@ Unidade 3: Resolução dos exercícios presentes na Unidade 3 do livro. Nesta un
 Unidade 4: Resolução dos exercícios presentes na Unidade 4 do livro. Nesta unidade foram desenvolvidos Algoritmos utilizando Estruturas de dados Homogêneas e Heterogêneas.
 
 Unidade 5: Resolução dos exercícios presentes na Unidade 5 do livro. Nesta unidade foram desenvolvidos Algoritmos utilizando Funções e procedimentos. 
+
+OBS: LIVRO ESCRITO PELA PROFESSORA GISLAINE CAMILA LAPASINI LEAL
